@@ -95,6 +95,18 @@ Feature: Apps on LetCode homepage
       And Print all the window title
       Then Close all the windows
 
+      @ElementSection
+      Scenario: Play with lot's of element and smash them
+
+        Given Login to LetCode test homepage
+        When Click Find Elements Button in the Elements Section on the homepage
+        And Click username input box
+        And Type and Enter your Github username "yusuf"
+        And Click search button
+        And Verify that user has image
+        And Print the user name & other informations
+        Then Verify that no.of public repositories are listed correctly
+
 
 
 
