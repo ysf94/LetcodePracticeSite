@@ -108,7 +108,22 @@ Feature: Apps on LetCode homepage
         Then Verify that no.of public repositories are listed correctly
 
 
+        @DragSection
+        Scenario: Let's go for a ride drag me around
 
+          Given Login to LetCode test homepage
+          When Click Auı Button in the Drag Section on the homepage
+          And Drag the Drag box
+
+
+
+        @DropSection
+        Scenario: Let's go for a ride drop me around
+
+          Given Login to LetCode test homepage
+          When Click DropAuı Button In The Drop Section On The Homepage
+          And Drag Source Box On Target Box
+          Then Verify that Where Is The Source Box
 
 
 

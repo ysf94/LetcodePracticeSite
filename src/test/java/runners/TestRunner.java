@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = "steps",
         stepNotifications = true,
         dryRun = false,
-        tags = "@ElementSection"
+        tags = "@DragSection"
 
 )
 public class TestRunner {
