@@ -8,17 +8,25 @@ public class DropSectionSteps {
 
     DropSectionPage dropPage = new DropSectionPage();
 
-    @When("Click DropAuı Button In The Drop Section On The Homepage")
-    public void click_drop_auı_button_in_the_drop_section_on_the_homepage() {
+    @When("Click the drop page entry button")
+    public void click_the_drop_page_entry_button() {
         dropPage.clickAUI2Btn();
     }
-    @When("Drag Source Box On Target Box")
-    public void drag_source_box_on_target_box() {
+    @When("Drop here")
+    public void dropHere() {
+        dropPage.verifyDropHere();
+    }
+    @When("Drag and drop box doing transit")
+    public void drag_and_drop_box_doing_transit() {
         dropPage.dragAndDropSourceBox();
     }
-    @Then("Verify that Where Is The Source Box")
-    public void verify_that_where_is_the_source_box() {
+
+
+    @Then("Verify that the operation is correct")
+    public void verifyThatTheOperationIsCorrect() {
+        dropPage.verifyThatDropped();
     }
+
 
 
 }
