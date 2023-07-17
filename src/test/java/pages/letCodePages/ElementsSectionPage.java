@@ -84,7 +84,7 @@ public class ElementsSectionPage extends BasePage {
     }
 
     public void usernameAndInformation() {
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>();
         for (int i = 0; i < userOtherInformation().size(); i++) {
             map.put(userOtherInformation().get(i).getText(), userOtherInfoPiece().get(i).getText());
         }
@@ -94,9 +94,9 @@ public class ElementsSectionPage extends BasePage {
     public void verifyThatPublicRepoIsListed (){
         int repoListNum = displayedReposPieceList().size();//30
         int viewRepoNum = Integer.parseInt(userOtherInfoPiece().get(0).getText().trim());
-
+        System.out.println("viewRepoNum = " + viewRepoNum);
         if (viewRepoNum > 30){
-            System.out.println("30 pieces repo is displaying and "+ (repoListNum-repoListNum) + " pieces repo is not displayed");
+            System.out.println("30 pieces repo is displaying and "+ (viewRepoNum-repoListNum) + " pieces repo is not displayed");
             assertTrue(viewRepoNum>30);
         }else {
             assertEquals(repoListNum, viewRepoNum);
