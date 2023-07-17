@@ -1,5 +1,6 @@
 package pages.letCodePages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,12 @@ public class DropSectionPage extends BasePage {
     @FindBy(xpath = "//div[@id=\"droppable\"]")
     private WebElement targetBox;
 
+    @FindBy(xpath = "//div/p[contains(text(),'Drop here')]")
+    private WebElement dropHereText;
+
+    @FindBy(xpath = "//div/p[contains(text(),'Dropped!')]")
+    private WebElement droppedText;
+
 
     public void clickAUI2Btn() {
         waitForClickability(dropSectionAUI2Btn, 10).click();
@@ -30,5 +37,14 @@ public class DropSectionPage extends BasePage {
         Actions act = new Actions(driver());
         act.dragAndDrop(sourceBox,targetBox).perform();
         waitFor(3);
+    }
+    public void verifyDropHere(){
+        waitFor(3);
+        Assert.assertTrue(dropHereText.getText().contains("Drop here"));
+        waitFor(3);
+    }
+    public void verifyThatDropped(){
+        waitFor(3);
+        Assert.assertTrue(droppedText.getText().contains("Dropped!"));
     }
 }

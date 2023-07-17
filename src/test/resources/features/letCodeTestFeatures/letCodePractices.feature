@@ -101,30 +101,30 @@ Feature: Apps on LetCode homepage
         Given Login to LetCode test homepage
         When Click Find Elements Button in the Elements Section on the homepage
         And Click username input box
-        And Type and Enter your Github username "yusuf"
+        And Type and Enter your Github username "george"
         And Click search button
         And Verify that user has image
         And Print the user name & other informations
         Then Verify that no.of public repositories are listed correctly
 
 
-        @DragSection
-        Scenario: Let's go for a ride drag me around
-
-          Given Login to LetCode test homepage
-          When Click Auı Button in the Drag Section on the homepage
-          And Drag the Drag box
+#        @DragSection
+#        Scenario: Let's go for a ride drag me around
+#
+#          Given Login to LetCode test homepage
+#          When Click Auı Button in the Drag Section on the homepage
+#          And Drag the Drag box
 
 
 
         @DropSection
-        Scenario: Let's go for a ride drop me around
+        Scenario: The task make in drop page
 
           Given Login to LetCode test homepage
-          When Click DropAuı Button In The Drop Section On The Homepage
-          And Drag Source Box On Target Box
-          Then Verify that Where Is The Source Box
-
+          When Click the drop page entry button
+          When Drop here
+          And Drag and drop box doing transit
+          Then Verify that the operation is correct
 
 
 
